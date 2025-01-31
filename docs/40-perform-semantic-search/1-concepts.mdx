@@ -22,7 +22,7 @@ To perform vector search on your data in MongoDB, you need to create a vector se
 }
 ```
 
-In the index definition, you specify the path to the embedding field (`path`), the number of dimensions in the embedding vectors (`numDimensions`), and a similarity metric that specifies how to determine nearest neighbors (`similarity`). You can also index filter fields that allow you to pre-filter on certain metadata to narrow the scope of the vector search.
+In the index definition, you specify the path to the embedding field (`path`), the number of dimensions in the embedding vectors (`numDimensions`), and a similarity metric that specifies how to determine nearest neighbors in vector space (`similarity`). You can also index filter fields that allow you to pre-filter on certain metadata to narrow the scope of the vector search.
 
 Vector search in MongoDB takes the form of an aggregation pipeline stage. It always needs to be the first stage in the pipeline and can be followed by other stages to further process the semantic search results. An example pipeline including the `$vectorSearch` stage is as follows:
 

@@ -1,8 +1,0 @@
-{
-  "label": "Dev Environment",
-  "position": 4,
-  "link": {
-    "type": "generated-index",
-    "description": "Set up the Python development environment for this lab."
-  }
-}
