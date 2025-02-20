@@ -12,7 +12,7 @@ const organizationName = "mongodb-developer";
 const title = "Build RAG Applications using MongoDB";
 const tagLine = "";
 const startButtonTitle = "Start Lab";
-const favicon = "img/favicon.svg"
+const favicon = "img/favicon.ico"
 
 // Main Page Features
 const featureList = [
@@ -55,7 +55,7 @@ const footerLinks = [
   },
   {
     label: "Developer Center",
-    href: `https://www.mongodb.com/developer/${utmParams}`,
+    href: `https://www.mongodb.com/developer?${utmParams}`,
   },
   {
     label: "GenAI Code Examples",
@@ -63,15 +63,11 @@ const footerLinks = [
   },
   {
     label: "GenAI Forums",
-    href: `https://www.mongodb.com/community/forums/c/generative-ai/162/${utmParams}`,
+    href: `https://www.mongodb.com/community/forums/c/generative-ai/162?${utmParams}`,
   },
   {
     href: `https://github.com/${organizationName}/${workshopName}`,
     label: "This lab in GitHub",
-  },
-  {
-    label: `© ${new Date().getFullYear()} MongoDB, Inc.`,
-    href: "#",
   },
 ];
 
@@ -148,6 +144,7 @@ const config = {
       footer: {
         style: "dark",
         links: footerLinks,
+        copyright: `© ${new Date().getFullYear()} MongoDB, Inc.`
       },
       prism: {
         theme: lightCodeTheme,
