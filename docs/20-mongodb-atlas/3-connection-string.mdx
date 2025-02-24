@@ -1,0 +1,27 @@
+import Screenshot from "@site/src/components/Screenshot";
+
+# 👐 Get your connection string
+
+To connect to your cluster later on, you will need to get the connection string for your cluster.
+
+In the Atlas UI, navigate to the **Overview** page. In the **Clusters section**, select your cluster and click **Connect**. 
+
+<Screenshot url="https://cloud.mongodb.com" src="img/screenshots/20-mongodb-atlas/3-connection-string/1-connect-button.png" alt="Connect button" />
+
+A modal will display several ways to connect to your database. Select **Drivers**.
+
+<Screenshot url="https://cloud.mongodb.com" src="img/screenshots/20-mongodb-atlas/3-connection-string/2-connect-modal.png" alt="Connect modal" />
+
+Look for your connection string. It should look something like this:
+
+```
+mongodb+srv://<username>:<password>@<cluster-url>/?retryWrites=true&w=majority&appName=Cluster0
+```
+
+<Screenshot url="https://cloud.mongodb.com" src="img/screenshots/20-mongodb-atlas/3-connection-string/3-connection-string.png" alt="Get connection string" />
+
+Click the copy button next to your connection string to copy it to your clipboard. Paste the connection string somewhere safe. You will need this connection string several times throughout this training.
+
+:::tip
+Don't forget to replace `<db_password>` with the password you set when you created the cluster.
+:::
