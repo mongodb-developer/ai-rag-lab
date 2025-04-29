@@ -1,8 +1,0 @@
-{
-    "label": "MongoDB Atlas",
-    "position": 20,
-    "link": {
-        "type": "generated-index",
-        "description": "Create a MongoDB Atlas account and deploy a free cluster"
-    }
-}

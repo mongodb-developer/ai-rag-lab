@@ -41,10 +41,12 @@ collection.insert_many(embedded_docs)
 </div>
 </details>
 
-To verify that the data has been imported into your MongoDB cluster, navigate to the **Overview** page in the Atlas UI. In the **Clusters section**, select your cluster and click **Browse collections**.
+To verify that the data has been imported into your MongoDB database, select the MongoDB leaf icon in the left toolbar.
 
-<Screenshot url="https://cloud.mongodb.com" src="img/screenshots/40-prepare-the-data/4-ingest-data/1-browse-collections.png" alt="Browse collections" />
+<Screenshot src="img/screenshots/40-prepare-the-data/4-ingest-data/1-select-mongodb.png" alt="Select MongoDB icon" />
 
-Ensure that you see a database called _mongodb_genai_devday_, and a collection named _knowledge_base_ under it. Note the number and format of documents in the collection.
+Select **Add Connection**, then **Connect**. Finally, enter the connection string ```mongodb://admin:mongodb@mongodb:27017/``` in the top text input:
 
-<Screenshot url="https://cloud.mongodb.com" src="img/screenshots/40-prepare-the-data/4-ingest-data/2-verify-collection.png" alt="Verify collection" />
+<Screenshot src="img/screenshots/40-prepare-the-data/4-ingest-data/2-enter-conn-string.png" alt="Enter commection string" />
+
+You can select the ```mongodb_genai_devday_rag / knowledge_base``` collection from the left panel, and browse the documents you'll find there.

@@ -3,7 +3,13 @@
 Replace any placeholders and run the cells under **Step 1: Setup prerequisites** section in the notebook.
 
 :::caution
-If running the lab locally, you will need to manually set the value of the `SERVERLESS_URL` variable as follows:
+If you're using your own database, you will need to manually set the value of the `MONGODB_URI` variable with your connection string:
+
+```python
+MONGODB_URI = "<<your connection string>>"
+```
+
+Also, if running the lab locally, set the value of the `SERVERLESS_URL` variable:
 
 ```python
 SERVERLESS_URL = "https://vtqjvgchmwcjwsrela2oyhlegu0hwqnw.lambda-url.us-west-2.on.aws/"
