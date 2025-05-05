@@ -1,0 +1,26 @@
+# 👐 Setup prerequisites
+
+Replace any placeholders and run the cells under **Step 1: Setup prerequisites** section in the notebook.
+
+:::info
+
+Additional steps **if you are running the lab locally**:
+
+* Spin up a MongoDB Atlas cluster and set the `MONGODB_URI` variable in this step to the connection string for your cluster as follows:
+
+    ```python
+    MONGODB_URI = "<your_connection_string>"
+    ```
+
+    Follow these steps to get set up with a MongoDB Atlas cluster:
+
+    * Register for a [free MongoDB Atlas account](https://www.mongodb.com/cloud/atlas/register)
+    * [Create a new database cluster](https://www.mongodb.com/docs/guides/atlas/cluster/?utm_campaign=devrel&utm_source=third-party-content&utm_medium=cta&utm_content=multimodal_rag_tutorial&utm_term=apoorva.joshi)
+    * [Obtain the connection string](https://www.mongodb.com/docs/guides/atlas/connection-string/?utm_campaign=devrel&utm_source=third-party-content&utm_medium=cta&utm_content=multimodal_rag_tutorial&utm_term=apoorva.joshi) for your database cluster
+
+* Manually set the value of the `SERVERLESS_URL` variable as follows:
+
+```python
+SERVERLESS_URL = "https://vtqjvgchmwcjwsrela2oyhlegu0hwqnw.lambda-url.us-west-2.on.aws/"
+```
+:::
