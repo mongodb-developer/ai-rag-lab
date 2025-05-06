@@ -1,6 +1,6 @@
 {
   "label": "Perform Vector Search on Your Data",
-  "position": 50,
+  "position": 440,
   "link": {
     "type": "generated-index",
     "description": "Perform vector search queries using MongoDB Atlas Vector Search"

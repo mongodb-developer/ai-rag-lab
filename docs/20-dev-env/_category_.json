@@ -1,6 +1,6 @@
 {
     "label": "Dev Environment",
-    "position": 30,
+    "position": 20,
     "link": {
         "type": "generated-index",
         "description": "Setup the dev environment and prerequisites"
