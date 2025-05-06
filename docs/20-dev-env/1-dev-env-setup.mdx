@@ -1,0 +1,112 @@
+import Screenshot from "@site/src/components/Screenshot";
+
+# 👐 Setup dev environment
+
+<details>
+  <summary>🦹 If you are doing this lab as part of a MongoDB GenAI Developer Day, you can continue in the Codespace you previously created.</summary>
+
+    Navigate to [this](https://github.com/codespaces/new/mongodb-developer/genai-devday-notebooks?quickstart=1) link. Click the **Resume this codespace** button to resume the code space you created previously.
+
+    <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/1-resume-codespace.png" alt="Resume codespace" />
+
+    Give the codespace a few seconds to restart. When files appear under the Explorer, click the file named `ai-rag-lab.ipynb`. This is the Jupyter Notebook you will be using throughout this lab.
+
+    <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/2-nav-notebook.png" alt="Navigate to the notebook" />
+</details>
+
+:::tip
+In this lab, we will be using Jupyter Notebooks, which is an interactive Python environment. If you are new to Jupyter Notebooks, use [this](https://mongodb-developer.github.io/vector-search-lab/docs/dev-env/jupyter-notebooks) guide to familiarize yourself with the environment.
+:::
+
+## Option 1: GitHub Codespaces
+
+You will be working in a Jupyter Notebook in a GitHub Codespace throughout this lab. A codespace is a cloud-hosted, containerized development environment that comes pre-configured with all the tools you need to run this lab.
+
+Navigate to [this](https://github.com/codespaces/new/mongodb-developer/genai-devday-notebooks?quickstart=1) link. You will be prompted to sign into GitHub if you haven't already. Once signed in, click the **Create new codespace** button to create a new codespace.
+
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/3-create-codespace.png" alt="Start a codespace" />
+
+Let it run for a few seconds as it prepares a Docker container with all the required libraries and a MongoDB cluster.
+
+Once the environment is built, you should see a VS Code IDE with a list of files under the Explorer tab. 
+
+In the left navigation bar of the IDE, click on the file named `ai-rag-lab.ipynb` to open the Jupyter Notebook for this lab.
+
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/2-nav-notebook.png" alt="Navigate to the notebook" />
+
+Next, select the Python interpreter by clicking **Select Kernel** at the top right of the IDE.
+
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/4-select-kernel.png" alt="Select kernel" />
+
+In the modal that appears, click **Python environments...** and select the interpreter that is marked as **Recommended** or **Global Env**.
+
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/5-python-env-modal.png" alt="Select Python Environments" />
+
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/6-select-recommended.png" alt="Select recommended interpreter" />
+
+That's it! You're ready for the lab!
+
+<details>
+  <summary>🦹 Use the MongoDB for VS Code extension to interact with the local MongoDB cluster from the VSCode IDE </summary>
+
+    In the left navigation bar of the IDE, click on the leaf icon. Under Connections, click the **Add Connection** button.
+
+    <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/7-add-connection.png" alt="Add MongoDB connection" />
+
+    In the tab that appears, click the **Connect** button.
+
+    <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/8-click-connect.png" alt="Click Connect" />
+
+    In the modal that appears at the top of the screen, enter the string `mongodb://admin:mongodb@mongodb:27017/` and hit `Enter` on your keyboard.
+
+    <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/9-enter-connection-string.png" alt="Enter connection string" />
+
+    If the connection was successful, you should see the cluster and its default databases under Connections. Any additional databases and collections created during the lab will appear here as well.
+
+    <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/10-connections.png" alt="View connections" />
+
+</details>
+
+## Option 2: Run locally
+
+:::caution
+During the lab, we will use GitHub Codespaces. These instructions are here just in case you can't use Codespaces or if you really, really, really want a local installation.
+:::
+
+To run the lab locally, follow the steps below:
+
+* Clone the [GitHub repo](https://github.com/mongodb-developer/genai-devday-notebooks.git) for this lab by executing the following command from the terminal:
+
+```
+git clone https://github.com/mongodb-developer/genai-devday-notebooks.git
+```
+
+* `cd` into the cloned directory:
+
+```
+cd genai-devday-notebooks
+```
+
+* Create and activate a Python virtual environment:
+
+```
+python -m venv mongodb-ai-rag-lab
+source mongodb-ai-rag-lab/bin/activate
+```
+
+* Install the dependencies for this lab:
+
+```
+pip install -r requirements.txt
+```
+
+* Install and launch Jupyter Notebook:
+
+```
+pip install notebook
+jupyter notebook
+```
+
+* In the browser tab that pops up, open the file named `ai-rag-lab.ipynb`.
+
+<Screenshot url="localhost:8888/tree" src="img/screenshots/20-dev-env/1-dev-env-setup/11-jupyter-notebook.png" alt="Jupyter Notebook" />
