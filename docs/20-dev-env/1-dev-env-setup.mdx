@@ -32,27 +32,19 @@ Let it run for a few seconds as it prepares a Docker container with all the requ
 
 Once the environment is built, you will be prompted to connect to the MongoDB cluster via MongoDB's VSCode extension. This will allow you to visualize the data that we will import into the cluster later in the lab, directly from the VSCode IDE.
 
-To connect to the cluster, click the **Connect** button.
+To connect to the cluster, click the leaf icon in the left navigation bar of the IDE.
 
-<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/4-click-connect.png" alt="Click Connect" />
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/4-click-leaf.png" alt="Click leaf icon" />
 
-In the modal that appears at the top of the screen, copy and paste the following string, and hit **Enter** on your keyboard:
+Under **Connections**, click the _mongodb:27017_ connection. This should automatically establish a connection to the local MongoDB cluster running on port 27017.
 
-<div>
-```
-mongodb://admin:mongodb@mongodb:27017/
-```
-</div>
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/5-connect-cluster.png" alt="Connect to the cluster" />
 
-<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/5-enter-connection-string.png" alt="Enter connection string" />
+If the connection was successful, you should see the message **Connected to: mongodb:27017** with a green indicator.
 
-If the connection was successful, you should see **Connected to: mongodb:27017** with a green indicator.
+You will also see the default databases in the cluster appear under **Connections**. Any additional databases we create during the lab will also appear here.
 
 <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/6-connection-successful.png" alt="Connection successful" />
-
-You can view the default and any additional collections we create on the cluster during the lab by clicking the leaf icon in the left navigation bar of the IDE.
-
-<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/7-view-collections.png" alt="View collections" />
 
 ### Jupyter Notebook setup
 
@@ -60,17 +52,17 @@ You will be filling code in a Jupyter Notebook during this lab, so let's get set
 
 Within the codespace, click on the files icon in the left navigation bar of the IDE. In the Explorer menu, under `notebooks`, click on the file named `ai-rag-lab.ipynb` to open the Jupyter Notebook for this lab.
 
-<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/8-nav-notebook.png" alt="Navigate to the notebook" />
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/7-nav-notebook.png" alt="Navigate to the notebook" />
 
 Next, select the Python interpreter by clicking **Select Kernel** at the top right of the IDE.
 
-<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/9-select-kernel.png" alt="Select kernel" />
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/8-select-kernel.png" alt="Select kernel" />
 
 In the modal that appears, click **Python environments...** and select the interpreter that is marked as **Recommended** or **Global Env**.
 
-<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/10-python-env-modal.png" alt="Select Python Environments" />
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/9-python-env-modal.png" alt="Select Python Environments" />
 
-<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/11-select-recommended.png" alt="Select recommended interpreter" />
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/10-select-recommended.png" alt="Select recommended interpreter" />
 
 That's it! You're ready for the lab!
 
@@ -116,4 +108,4 @@ jupyter notebook
 
 * In the browser tab that pops up, open the file named `ai-rag-lab.ipynb`.
 
-<Screenshot url="localhost:8888/tree" src="img/screenshots/20-dev-env/1-dev-env-setup/12-jupyter-notebook.png" alt="Jupyter Notebook" />
+<Screenshot url="localhost:8888/tree" src="img/screenshots/20-dev-env/1-dev-env-setup/11-jupyter-notebook.png" alt="Jupyter Notebook" />
