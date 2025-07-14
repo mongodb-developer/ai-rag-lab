@@ -1,157 +1,208 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
 // Change here to customise config
-
 // Name of the Github Repo, it's also teh baseUrl
-const workshopName = 'ai-rag-lab';
 // Change this if hosting outside mongodb-developer
-const organizationName = "mongodb-developer";
-
 // Main page config
-const title = "Build RAG Applications using MongoDB";
-const tagLine = "";
-const startButtonTitle = "Start Lab";
-const favicon = "img/favicon.ico"
-
 // Main Page Features
-const featureList = [
-  {
-    title: 'Hands-On Experiences',
-    illustration: 'img/coding.png',
-    description: `
-        Learn by doing, not by reading.
-    `,
-  },
-  {
-    title: 'Amazing Instructors',
-    illustration: 'img/highfive.png',
-    description: `
-        Build it with the help of our amazing instructors, or just do it on your own.
-    `,
-  },
-  {
-    title: 'Take-Home Material',
-    illustration: 'img/writing.png',
-    description: `
-        Take home the material and keep learning.
-    `,
-  },
-];
-
 // UTM stuff
-
-const utmAdvocateName = `apoorva.joshi`;
-const utmWorkshopName = 'ai_rag_lab'
-
-const utmParams = `utm_campaign=devrel&utm_source=workshop&utm_medium=cta&utm_content=${utmWorkshopName}&utm_term=${utmAdvocateName}`;
-
 // Footer links (probably no need to change them)
-
-const footerLinks = [
-  {
-    label: "Try MongoDB Atlas",
-    href: `https://www.mongodb.com/try?${utmParams}`,
-  },
-  {
-    label: "Developer Center",
-    href: `https://www.mongodb.com/developer?${utmParams}`,
-  },
-  {
-    label: "GenAI Code Examples",
-    href: `https://github.com/mongodb-developer/GenAI-Showcase`,
-  },
-  {
-    label: "GenAI Forums",
-    href: `https://www.mongodb.com/community/forums/c/generative-ai/162?${utmParams}`,
-  },
-  {
-    href: `https://github.com/${organizationName}/${workshopName}`,
-    label: "This lab in GitHub",
-  },
-];
-
 ///////////////////////////////////////////////////////////////////////////////
 // DON'T CHANGE ANYTHING BELOW UNLESS YOU KNOW WHAT YOU'RE DOING             //
 ///////////////////////////////////////////////////////////////////////////////
+/** @type {import('@docusaurus/types').Config} */
+/** @type {import('@docusaurus/preset-classic').Options} */
+// language codes
+/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+// this should be commented out as we're generating a static site and serving it through GitHub Pages
+// See: https://docusaurus.io/blog/releases/3.4#hash-router---experimental
+// > This mode is not recommended for sites deployed through a web server.
+// experimental_router: "hash",
+const workshopName = "docusaurus-workshop";
+const organizationName = "mongodb-developer";
+const title = "Docusaurus Meta Workshop";
+const tagLine = "A Workshop written in Docusaurus to teach you how to write Workshops using docusaurus";
+const startButtonTitle = "Enter Inception";
+const favicon = "img/favicon.svg";
 
-const { themes } = require("prism-react-renderer");
+const featureList = [{
+    title: "Hands-On Experiences",
+    illustration: "img/coding.png",
+
+    description: `
+        Learn by doing, not by reading.
+    `
+}, {
+    title: "Amazing Instructors",
+    illustration: "img/highfive.png",
+
+    description: `
+        Build it with the help of our amazing instructors, or just do it on your own.
+    `
+}, {
+    title: "Take-Home Material",
+    illustration: "img/writing.png",
+
+    description: `
+        Take home the material and keep learning.
+    `
+}];
+
+const utmAdvocateName = `diego.freniche`;
+const utmWorkshopName = "docusaurus_workshop";
+const utmParams = `utm_campaign=devrel&utm_source=workshop&utm_medium=cta&utm_content=${utmWorkshopName}&utm_term=${utmAdvocateName}`;
+
+const footerLinks = [{
+    label: "Try MongoDB Atlas",
+    href: `https://www.mongodb.com/try?${utmParams}`
+}, {
+    label: "Forums",
+    href: `https://www.mongodb.com/community/forums?${utmParams}`
+}, {
+    label: "Developer Center",
+    href: `https://www.mongodb.com/developer?${utmParams}`
+}, {
+    label: "MongoDB University",
+    href: `https://learn.mongodb.com?${utmParams}`
+}, {
+    href: `https://github.com/${organizationName}/${workshopName}`,
+    label: "This lab in GitHub"
+}];
+
+const {
+    themes
+} = require("prism-react-renderer");
+
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
-/** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: `${title}`,
-  tagline: `${tagLine}`,
-  url: `https://${workshopName}.github.io`,
-  baseUrl: `/${workshopName}/`,
-  projectName: `${organizationName}.github.io`,
-  organizationName: `${organizationName}`,
-  trailingSlash: false,
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
-  favicon: `${favicon}`,
-  deploymentBranch: "gh-pages",
-  staticDirectories: ["static"],
-  customFields: {
-    startButtonTitle: `${startButtonTitle}`,
-    featureList: featureList,
-    utmParams
-  },
-  presets: [
-    [
-      "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+    title: `${title}`,
+    tagline: `${tagLine}`,
+    url: `https://${workshopName}.github.io`,
+    baseUrl: `/${workshopName}/`,
+    projectName: `${organizationName}.github.io`,
+    organizationName: `${organizationName}`,
+    trailingSlash: false,
+    onBrokenLinks: "throw",
+    onBrokenMarkdownLinks: "warn",
+    favicon: `${favicon}`,
+    deploymentBranch: "gh-pages",
+    staticDirectories: ["static"],
+
+    i18n: {
+        defaultLocale: "en",
+        locales: ["en", "es"]
+    },
+
+    customFields: {
+        startButtonTitle: `${startButtonTitle}`,
+        featureList: featureList,
+        utmParams
+    },
+
+    presets: [["classic", ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: `https://github.com/${organizationName}/${workshopName}/blob/main`,
+            sidebarPath: require.resolve("./sidebars.js"),
+            editUrl: `https://github.com/${organizationName}/${workshopName}/blob/main`
         },
+
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+            customCss: require.resolve("./src/css/custom.css")
         },
+
         gtag: {
-          trackingID: "G-ZJ28V71VTQ",
-          anonymizeIP: true,
+            trackingID: "G-ZJ28V71VTQ",
+            anonymizeIP: true
+        }
+    })]],
+
+    plugins: [[require.resolve("docusaurus-lunr-search"), {
+        languages: ["es", "en"]
+    }]],
+
+    themeConfig: ({
+        docs: {
+            sidebar: {
+                autoCollapseCategories: true,
+                hideable: true
+            }
         },
-      }),
-    ],
-  ],
-  plugins: [require.resolve("docusaurus-lunr-search")],
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      docs: {
-        sidebar: {
-          autoCollapseCategories: true,
-          hideable: true,
+
+        announcementBar: {
+            id: "feedback_form",
+            content: "This is a demonstration that we can put a pop-up message here! Even <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"#\">links</a>",
+            backgroundColor: "#fafbfc",
+            textColor: "#091E42",
+            isCloseable: true
         },
-      },
-      navbar: {
-        title: `${title}`,
-        logo: {
-          alt: "MongoDB Logo",
-          src: "img/logo.svg",
-          srcDark: "img/logo-dark.svg",
-          className: "navbar-logo",
-          width: "135px",
-          height: "100%",
+
+        navbar: {
+            title: `${title}`,
+
+            logo: {
+                alt: "MongoDB Logo",
+                src: "img/logo.svg",
+                srcDark: "img/logo-dark.svg",
+                className: "navbar-logo",
+                width: "135px",
+                height: "100%"
+            },
+
+            items: [{
+                type: "localeDropdown",
+                position: "right"
+            }]
         },
-        items: [
-         
-        ],
-      },
-      footer: {
-        style: "dark",
-        links: footerLinks,
-        copyright: `© ${new Date().getFullYear()} MongoDB, Inc.`
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        additionalLanguages: ["powershell", "swift", "kotlin"],
-      },
+
+        footer: {
+            style: "dark",
+            links: footerLinks,
+            copyright: `© ${new Date().getFullYear()} MongoDB, Inc.`
+        },
+
+        prism: {
+            theme: lightCodeTheme,
+            darkTheme: darkCodeTheme,
+            additionalLanguages: ["powershell", "swift", "kotlin"]
+        },
+
+        mermaid: {
+            theme: {
+                light: "neutral",
+                dark: "forest"
+            }
+        }
     }),
+
+    future: {
+        v4: {
+            removeLegacyPostBuildHeadAttribute: true,
+            useCssCascadeLayers: true
+        },
+
+        experimental_faster: {
+            swcJsLoader: true,
+            swcJsMinimizer: true,
+            swcHtmlMinimizer: true,
+            lightningCssMinimizer: true,
+            rspackBundler: true,
+            rspackPersistentCache: true,
+            ssgWorkerThreads: true,
+            mdxCrossCompilerCache: true
+        },
+
+        experimental_storage: {
+            type: "localStorage",
+            namespace: true
+        }
+    },
+
+    markdown: {
+        mermaid: true
+    },
+
+    themes: ["@docusaurus/theme-mermaid"]
 };
 
 module.exports = config;
