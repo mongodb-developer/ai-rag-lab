@@ -1,0 +1,8 @@
+{
+  "label": "Conceitos Fundamentais",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Aprenda os fundamentos da Geração Aumentada por Recuperação, também conhecida como RAG"
+  }
+}

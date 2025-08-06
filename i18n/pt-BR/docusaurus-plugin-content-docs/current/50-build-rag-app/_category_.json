@@ -1,0 +1,8 @@
+{
+  "label": "Construir a Aplicação RAG",
+  "position": 50,
+  "link": {
+    "type": "generated-index",
+    "description": "Construa a aplicação RAG"
+  }
+}

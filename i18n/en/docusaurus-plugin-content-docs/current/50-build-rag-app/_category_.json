@@ -1,0 +1,8 @@
+{
+  "label": "Build the RAG Application",
+  "position": 50,
+  "link": {
+    "type": "generated-index",
+    "description": "Build the RAG application"
+  }
+}

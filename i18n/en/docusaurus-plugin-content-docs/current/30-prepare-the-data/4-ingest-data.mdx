@@ -1,0 +1,34 @@
+import Screenshot from "@site/src/components/Screenshot";
+
+# 👐 Ingest data into MongoDB
+
+The final step to build a MongoDB vector store for the chatbot is to ingest the embedded article chunks into MongoDB.
+
+Fill in any `<CODE_BLOCK_N>` placeholders and run the cells under the **Step 5: Ingest data into MongoDB** section in the notebook to ingest the embedded documents into MongoDB.
+
+The answers for code blocks in this section are as follows:
+
+**CODE_BLOCK_5**
+
+<details>
+<summary>Answer</summary>
+<div>
+```python
+collection.insert_many(embedded_docs)
+```
+</div>
+</details>
+
+To visually verify that the data has been imported into the MongoDB cluster, click the leaf icon in the left navigation bar of the IDE.
+    
+Ensure that you see a database called _mongodb_genai_devday_rag_, and a collection named _knowledge_base_ under it. 
+
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/30-prepare-the-data/4-ingest-data/1-verify-collection.png" alt="Verify collection" />
+
+Click the **>** arrow next to _knowledge_base_ and note the number of documents.
+
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/30-prepare-the-data/4-ingest-data/2-document-count.png" alt="Verify document count" />
+
+To preview a document, click the **>** arrow next to _Documents_ and select a document from the list.
+
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/30-prepare-the-data/4-ingest-data/3-preview-document.png" alt="Preview document" />
