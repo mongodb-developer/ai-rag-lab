@@ -1,0 +1,40 @@
+# 👐 Construir a aplicação RAG
+
+Vamos criar um fluxo de trabalho RAG simples que recebe uma consulta do usuário, recupera documentos contextualmente relevantes do MongoDB Atlas, e passa a consulta e o contexto recuperado para um LLM para gerar uma resposta à pergunta do usuário.
+
+Preencha quaisquer espaços reservados `<CODE_BLOCK_N>` e execute as células sob a seção **Step 8: Build the RAG application** no notebook para construir a "aplicação" RAG.
+
+As respostas para os blocos de código nesta seção são as seguintes:
+
+**CODE_BLOCK_14**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+vector_search(user_query)
+```
+</div>
+</details>
+
+**CODE_BLOCK_15**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+create_prompt(user_query)
+```
+</div>
+</details>
+
+**CODE_BLOCK_16**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+[{"role": "user", "content": prompt}]
+```
+</div>
+</details>

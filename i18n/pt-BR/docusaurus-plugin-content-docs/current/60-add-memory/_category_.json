@@ -1,0 +1,8 @@
+{
+  "label": "Adicionar memória à aplicação RAG",
+  "position": 60,
+  "link": {
+    "type": "generated-index",
+    "description": "Incorpore o histórico de conversas na aplicação RAG"
+  }
+}

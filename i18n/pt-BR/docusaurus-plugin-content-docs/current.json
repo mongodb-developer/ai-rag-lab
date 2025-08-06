@@ -1,0 +1,54 @@
+{
+  "version.label": {
+    "message": "Próximo",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Key Concepts": {
+    "message": "Conceitos Fundamentais",
+    "description": "The label for category Key Concepts in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Key Concepts.link.generated-index.description": {
+    "message": "Aprenda os fundamentos da Geração Aumentada por Recuperação, também conhecida como RAG",
+    "description": "The generated-index page description for category Key Concepts in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Dev Environment": {
+    "message": "Ambiente de Desenvolvimento",
+    "description": "The label for category Dev Environment in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Dev Environment.link.generated-index.description": {
+    "message": "Configure o ambiente de desenvolvimento e pré-requisitos",
+    "description": "The generated-index page description for category Dev Environment in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Prepare the Data": {
+    "message": "Preparar os Dados",
+    "description": "The label for category Prepare the Data in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Prepare the Data.link.generated-index.description": {
+    "message": "Baixe, fragmente, embute e ingira os dados",
+    "description": "The generated-index page description for category Prepare the Data in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Perform Vector Search on Your Data": {
+    "message": "Realizar Busca Vetorial nos Seus Dados",
+    "description": "The label for category Perform Vector Search on Your Data in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Perform Vector Search on Your Data.link.generated-index.description": {
+    "message": "Execute consultas de busca vetorial usando MongoDB Atlas Vector Search",
+    "description": "The generated-index page description for category Perform Vector Search on Your Data in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Build the RAG Application": {
+    "message": "Construir a Aplicação RAG",
+    "description": "The label for category Build the RAG Application in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Build the RAG Application.link.generated-index.description": {
+    "message": "Construa a aplicação RAG",
+    "description": "The generated-index page description for category Build the RAG Application in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Add memory to the RAG application": {
+    "message": "Adicionar memória à aplicação RAG",
+    "description": "The label for category Add memory to the RAG application in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Add memory to the RAG application.link.generated-index.description": {
+    "message": "Incorpore o histórico de conversas na aplicação RAG",
+    "description": "The generated-index page description for category Add memory to the RAG application in sidebar tutorialSidebar"
+  }
+}
