@@ -1,0 +1,34 @@
+import Screenshot from "@site/src/components/Screenshot";
+
+# 👐 Ingerir dados no MongoDB
+
+O passo final para construir um armazenamento vetorial MongoDB para o chatbot é ingerir os chunks de artigos embutidos no MongoDB.
+
+Preencha quaisquer espaços reservados `<CODE_BLOCK_N>` e execute as células sob a seção **Step 5: Ingest data into MongoDB** no notebook para ingerir os documentos embutidos no MongoDB.
+
+As respostas para os blocos de código nesta seção são as seguintes:
+
+**CODE_BLOCK_5**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+collection.insert_many(embedded_docs)
+```
+</div>
+</details>
+
+Para verificar visualmente que os dados foram importados para o cluster MongoDB, clique no ícone de folha na barra de navegação esquerda do IDE.
+    
+Certifique-se de que você vê um banco de dados chamado _mongodb_genai_devday_rag_, e uma coleção chamada _knowledge_base_ sob ele. 
+
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/30-prepare-the-data/4-ingest-data/1-verify-collection.png" alt="Verify collection" />
+
+Clique na seta **>** ao lado de _knowledge_base_ e observe o número de documentos.
+
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/30-prepare-the-data/4-ingest-data/2-document-count.png" alt="Verify document count" />
+
+Para visualizar um documento, clique na seta **>** ao lado de _Documents_ e selecione um documento da lista.
+
+<Screenshot url="https://github.com/codespaces" src="img/screenshots/30-prepare-the-data/4-ingest-data/3-preview-document.png" alt="Preview document" />

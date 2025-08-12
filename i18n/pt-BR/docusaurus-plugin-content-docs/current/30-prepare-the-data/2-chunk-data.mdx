@@ -1,0 +1,29 @@
+# 👐 Fragmentar os dados
+
+Como estamos trabalhando com documentos grandes, primeiro precisamos dividi-los em chunks menores antes de embuti-los e armazená-los no MongoDB.
+
+Preencha quaisquer espaços reservados `<CODE_BLOCK_N>` e execute as células sob a seção **Step 3: Chunk up the data** no notebook para fragmentar os artigos que carregamos.
+
+As respostas para os blocos de código nesta seção são as seguintes:
+
+**CODE_BLOCK_1**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+text_splitter.split_text(text)
+```
+</div>
+</details>
+
+**CODE_BLOCK_2**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+get_chunks(doc, "body")
+```
+</div>
+</details>

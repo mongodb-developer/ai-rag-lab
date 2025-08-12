@@ -1,0 +1,8 @@
+{
+    "label": "Ambiente de Desenvolvimento",
+    "position": 20,
+    "link": {
+        "type": "generated-index",
+        "description": "Configure o ambiente de desenvolvimento e pré-requisitos"
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Add memory to the RAG application",
+  "position": 60,
+  "link": {
+    "type": "generated-index",
+    "description": "Incorporate chat history into the RAG application"
+  }
+}

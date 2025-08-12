@@ -1,0 +1,33 @@
+# 👐 Gerar Embeddings
+
+Para realizar busca vetorial nos dados, precisamos embuti-los (ou seja, gerar vetores de Embeddings) antes de ingeri-los no MongoDB.
+
+Preencha quaisquer espaços reservados `<CODE_BLOCK_N>` e execute as células sob a seção **Step 4: Generate embeddings** no notebook para embutir os artigos fragmentados.
+
+As respostas para os blocos de código nesta seção são as seguintes:
+
+**CODE_BLOCK_3**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+embedding_model.encode(text)
+```
+</div>
+</details>
+
+**CODE_BLOCK_4**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+doc["embedding"] = get_embedding(doc["body"])
+```
+</div>
+</details>
+
+:::caution
+Se a geração de Embeddings estiver demorando muito (> 5 min), interrompa a célula e continue para o próximo passo com os documentos que foram embutidos até aquele ponto.
+:::
