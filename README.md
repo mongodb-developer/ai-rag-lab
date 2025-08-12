@@ -1,3 +1,5 @@
+[![.github/workflows/deploy.yml](https://github.com/mongodb-developer/ai-rag-lab/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/mongodb-developer/ai-rag-lab/actions/workflows/deploy.yml)
+
 # Developer Days RAG Lab
 
 This is the RAG Lab used during MongoDB Developer Days that covers building RAG applications using MongoDB.
