@@ -2,22 +2,22 @@
 
 Now let's run some vector search queries against the data present in MongoDB. 
 
-Fill in any `<CODE_BLOCK_N>` placeholders and run the cells under the **Step 7: Perform vector search on your data** section in the notebook to run vector search queries against your data.
+Fill in any `<CODE_BLOCK_N>` placeholders and run the cells under the **Step 6: Perform vector search on your data** section in the notebook to run vector search queries against your data.
 
 The answers for code blocks in this section are as follows:
 
-**CODE_BLOCK_7**
+**CODE_BLOCK_8**
 
 <details>
 <summary>Answer</summary>
 <div>
 ```python
-get_embedding(user_query)
+get_embeddings([user_query], "query")
 ```
 </div>
 </details>
 
-**CODE_BLOCK_8**
+**CODE_BLOCK_9**
 
 <details>
 <summary>Answer</summary>
@@ -37,6 +37,9 @@ get_embedding(user_query)
         "$project": {
             "_id": 0,
             "body": 1,
+            "metadata.productName": 1, 
+            "metadata.contentType": 1,
+            "updated": 1,
             "score": {"$meta": "vectorSearchScore"}
         }
     }
@@ -45,7 +48,7 @@ get_embedding(user_query)
 </div>
 </details>
 
-**CODE_BLOCK_9**
+**CODE_BLOCK_10**
 
 <details>
 <summary>Answer</summary>

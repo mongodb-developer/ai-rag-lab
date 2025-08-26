@@ -1,0 +1,75 @@
+# 👐 Chunk and embed the data
+
+Since we are working with large documents, we first need to break them up into smaller chunks. Then, to make each chunk searchable using vector search, we need to add embeddings to them.
+
+In this workshop, we will use _voyage-context-3_ from Voyage AI to produce contextualized embeddings for the chunks.
+
+Fill in any `<CODE_BLOCK_N>` placeholders and run the cells under the **Step 3: Chunk and embed the data** section in the notebook to chunk and embed the articles we loaded.
+
+The answers for code blocks in this section are as follows:
+
+**CODE_BLOCK_1**
+
+<details>
+<summary>Answer</summary>
+<div>
+```python
+text_splitter.split_text(text)
+```
+</div>
+</details>
+
+**CODE_BLOCK_2**
+
+<details>
+<summary>Answer</summary>
+<div>
+```python
+vo.contextualized_embed(inputs=[content], model="voyage-context-3", input_type=input_type)
+```
+</div>
+</details>
+
+**CODE_BLOCK_3**
+
+<details>
+<summary>Answer</summary>
+<div>
+```python
+get_chunks(doc, "body")
+```
+</div>
+</details>
+
+**CODE_BLOCK_4**
+
+<details>
+<summary>Answer</summary>
+<div>
+```python
+get_embeddings(chunks, "document")
+```
+</div>
+</details>
+
+**CODE_BLOCK_5**
+
+<details>
+<summary>Answer</summary>
+<div>
+```python
+chunk_doc["body"] = chunk
+```
+</div>
+</details>
+
+**CODE_BLOCK_6**
+
+<details>
+<summary>Answer</summary>
+<div>
+```python
+chunk_doc["embedding"] = embedding
+```
+</div>
+</details>
