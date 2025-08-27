@@ -6,12 +6,47 @@ RAG systems have two main components: **Retrieval** and **Generation**.
 
 Retrieval mainly involves processing your data and constructing a knowledge base in a way that you are able to efficiently retrieve relevant information from it. It typically involves three main steps:
 
-* **Chunking**: Break down large pieces of information into smaller segments or chunks.
+### Chunking
 
-* **Embedding**: Convert a piece of information such as text, images, audio, video, etc. into an array of numbers a.k.a. vectors.
+Chunking is the process of breaking down large pieces of mainly text into smaller segments or chunks. At retrieval time, only the chunks that are most relevant to the user queries are retrieved. This helps reduce generation costs since fewer tokens are used. It also helps reduce hallucinations by focusing the attention of LLMs on the most relevant information, rather than having them sift through a large body of text to identify the relevant parts.
 
-* **Vector Search**: Retrieve the most relevant documents from the knowledge base based on embedding similarity with the query vector.
+There are several common chunking methodologies for RAG:
+* **Fixed token with overlap**: Splits text into chunks consisting of a fixed number of tokens, with some overlap between chunks to avoid context loss at chunk boundaries.
+
+![](/img/screenshots/10-key-concepts/fixed-token.png)
+
+* **Recursive with overlap**: First splits text on a set of characters and recursively merges them into tokens until the desired chunk size is reached. This has the effect of keeping related text in the same chunk to the extent possible. 
+
+![](/img/screenshots/10-key-concepts/recursive.png)
+
+* **Semantic**: Creates splits at semantic boundaries, typically identified using an LLM.
+
+
+![](/img/screenshots/10-key-concepts/semantic.png)
+
+
+### Embedding
+
+Convert a piece of information such as text, images, audio, video, etc. into an array of numbers a.k.a. vectors. Read more about embeddings [here](https://mongodb-developer.github.io/vector-search-lab/docs/key-concepts/embeddings).
+
+### Vector Search:
+
+Retrieve the most relevant documents from a knowledge base based on their similarity to the embedding of the query vector. Read more about vector search and how it works in MongoDB [here](https://mongodb-developer.github.io/vector-search-lab/docs/key-concepts/vector-search).
 
 ## Generation
 
-Generation involves crafting a prompt that contains all the instructions and information required by the LLM to generate accurate answers to user queries.
+Generation involves passing the information retrieved using vector search, system prompts, the user query and information from past interactions (memory) to the LLM for it to generate context-aware responses to user questions.
+
+Here's an example of what a RAG prompt might look like:
+
+```
+# System prompt
+Answer the question based on the context below. If no context is provided, respond with I DON’T KNOW.
+# Retrieved context
+Context: <CONTEXT> 
+# Memory
+User: Give me a summary of Q4 earnings for ABMD.
+Assistant: <ANSWER>
+# User question
+Question: What were some comments made by the CEO?
+```
