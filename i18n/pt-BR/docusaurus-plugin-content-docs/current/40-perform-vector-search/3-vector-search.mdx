@@ -1,0 +1,57 @@
+# 👐 Executar consultas de busca vetorial
+
+Agora vamos executar algumas consultas de busca vetorial contra os dados presentes no MongoDB. 
+
+Preencha quaisquer espaços reservados `<CODE_BLOCK_N>` e execute as células sob a seção **Step 7: Perform vector search on your data** no notebook para executar consultas de busca vetorial contra seus dados.
+
+As respostas para os blocos de código nesta seção são as seguintes:
+
+**CODE_BLOCK_7**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+get_embedding(user_query)
+```
+</div>
+</details>
+
+**CODE_BLOCK_8**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```json
+[
+    {
+        "$vectorSearch": {
+            "index": ATLAS_VECTOR_SEARCH_INDEX_NAME,
+            "queryVector": query_embedding,
+            "path": "embedding",
+            "numCandidates": 150,
+            "limit": 5
+        }
+    },
+    {
+        "$project": {
+            "_id": 0,
+            "body": 1,
+            "score": {"$meta": "vectorSearchScore"}
+        }
+    }
+]
+```
+</div>
+</details>
+
+**CODE_BLOCK_9**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+collection.aggregate(pipeline)
+```
+</div>
+</details>

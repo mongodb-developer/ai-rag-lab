@@ -1,0 +1,126 @@
+# 🦹 Combine pre-filtering with vector search
+
+Pre-filtering is a technique to optimize vector search by only considering documents that match certain criteria during vector search.
+
+In this section, you will learn how to combine filters with vector search. This mainly involves:
+* Updating the vector search index to include the appropriate filter fields
+* Updating the `$vectorSearch` stage in the aggregation pipeline definition to include the filters
+
+Fill in any `<CODE_BLOCK_N>` placeholders and run the cells under the **🦹‍♀️ Combine pre-filtering with vector search** section in the notebook to experiment with combining pre-filters with your vector search queries.
+
+The answers for code blocks in this section are as follows:
+
+**CODE_BLOCK_10**
+
+<details>
+<summary>Answer</summary>
+<div>
+```json
+{
+    "name": ATLAS_VECTOR_SEARCH_INDEX_NAME,
+    "type": "vectorSearch",
+    "definition": {
+        "fields": [
+            {
+                "type": "vector",
+                "path": "embedding",
+                "numDimensions": 384,
+                "similarity": "cosine"
+            },
+            {"type": "filter", "path": "metadata.productName"}
+        ]
+    }
+}
+```
+</div>
+</details>
+
+**CODE_BLOCK_11**
+
+<details>
+<summary>Answer</summary>
+<div>
+```json
+[
+    {
+        "$vectorSearch": {
+            "index": ATLAS_VECTOR_SEARCH_INDEX_NAME,
+            "path": "embedding",
+            "queryVector": query_embedding,
+            "numCandidates": 150,
+            "limit": 5,
+            "filter": {"metadata.productName": "MongoDB Atlas"}
+        }
+    },
+    {
+        "$project": {
+            "_id": 0,
+            "body": 1,
+            "score": {"$meta": "vectorSearchScore"}
+        }
+    }
+]
+```
+</div>
+</details>
+
+**CODE_BLOCK_12**
+
+<details>
+<summary>Answer</summary>
+<div>
+```json
+{
+    "name": ATLAS_VECTOR_SEARCH_INDEX_NAME,
+    "type": "vectorSearch",
+    "definition": {
+        "fields": [
+            {
+                "type": "vector",
+                "path": "embedding",
+                "numDimensions": 384,
+                "similarity": "cosine"
+            },
+            {"type": "filter", "path": "metadata.contentType"},
+            {"type": "filter", "path": "updated"}
+        ]
+    }
+}
+```
+</div>
+</details>
+
+**CODE_BLOCK_13**
+
+<details>
+<summary>Answer</summary>
+<div>
+```json
+[
+    {
+        "$vectorSearch": {
+            "index": ATLAS_VECTOR_SEARCH_INDEX_NAME,
+            "path": "embedding",
+            "queryVector": query_embedding,
+            "numCandidates": 150,
+            "limit": 5,
+            "filter": {
+                "$and": [
+                    {"metadata.contentType": "Tutorial"},
+                    {"updated": {"$gte": "2024-05-19"}}
+                ]
+            }
+        }
+    },
+    {
+        "$project": {
+            "_id": 0,
+            "body": 1,
+            "updated": 1,
+            "score": {"$meta": "vectorSearchScore"}
+        }
+    }
+]
+```
+</div>
+</details>

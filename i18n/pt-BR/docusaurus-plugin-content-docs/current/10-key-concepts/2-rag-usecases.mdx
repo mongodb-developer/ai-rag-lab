@@ -1,0 +1,28 @@
+# 📘 Quando usar RAG?
+
+RAG é mais adequado para o seguinte:
+* Tarefas que requerem informações muito específicas que você não acha que estarão presentes no conhecimento paramétrico dos LLMs, ou seja, informações que não estão amplamente disponíveis na internet
+* Tarefas que requerem informações de múltiplas fontes de dados diferentes
+* Tarefas que envolvem questionamento básico ou resumo de uma informação
+
+Não espere sucesso em tarefas complexas de múltiplas etapas envolvendo raciocínio dedutivo ou planejamento de longo prazo. Essas são mais adequadas para fluxos de trabalho baseados em agentes.
+
+Aqui estão alguns exemplos de tarefas/perguntas que **NÃO** requerem ou não podem ser alcançadas com RAG:
+
+> Quem foi o primeiro presidente dos Estados Unidos?
+
+A informação necessária para responder a esta pergunta muito provavelmente está presente no conhecimento paramétrico da maioria dos LLMs. Portanto, esta pergunta pode ser respondida usando um prompt simples para um LLM.
+
+> Como a tendência na ingestão média diária de calorias entre adultos mudou na última década nos Estados Unidos, e qual impacto isso pode ter nas taxas de obesidade? Além disso, você pode fornecer uma representação gráfica da tendência nas taxas de obesidade durante este período?
+
+Esta pergunta envolve múltiplas sub-tarefas como agregação de dados, visualização e raciocínio. Portanto, este é um bom caso de uso para um agente de IA em vez de RAG.
+
+Aqui estão alguns casos de uso para RAG:
+
+> Qual é a política de reembolso de viagem para refeições da minha empresa?
+
+A informação necessária para responder a esta pergunta muito provavelmente não está presente no conhecimento paramétrico dos LLMs disponíveis. No entanto, esta pergunta pode ser facilmente respondida usando RAG em uma base de conhecimento consistindo dos dados da sua empresa.
+
+> Olá, estou tendo problemas para instalar seu software no meu computador Windows 10. Ele continua me dando uma mensagem de erro dizendo 'Instalação falhou: Código de erro 1234'. Como posso resolver este problema?
+
+Novamente, esta pergunta requer informações de solução de problemas para um software específico, cuja documentação pode não estar amplamente disponível, mas pode ser resolvida usando RAG.

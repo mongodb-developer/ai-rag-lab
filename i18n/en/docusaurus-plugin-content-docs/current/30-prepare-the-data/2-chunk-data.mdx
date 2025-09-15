@@ -1,0 +1,29 @@
+# 👐 Chunk up the data
+
+Since we are working with large documents, we first need to break them up into smaller chunks before embedding and storing them in MongoDB.
+
+Fill in any `<CODE_BLOCK_N>` placeholders and run the cells under the **Step 3: Chunk up the data** section in the notebook to chunk up the articles we loaded.
+
+The answers for code blocks in this section are as follows:
+
+**CODE_BLOCK_1**
+
+<details>
+<summary>Answer</summary>
+<div>
+```python
+text_splitter.split_text(text)
+```
+</div>
+</details>
+
+**CODE_BLOCK_2**
+
+<details>
+<summary>Answer</summary>
+<div>
+```python
+get_chunks(doc, "body")
+```
+</div>
+</details>
