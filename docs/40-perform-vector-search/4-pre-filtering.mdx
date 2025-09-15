@@ -10,7 +10,7 @@ Fill in any `<CODE_BLOCK_N>` placeholders and run the cells under the **🦹‍�
 
 The answers for code blocks in this section are as follows:
 
-**CODE_BLOCK_10**
+**CODE_BLOCK_11**
 
 <details>
 <summary>Answer</summary>
@@ -24,7 +24,7 @@ The answers for code blocks in this section are as follows:
             {
                 "type": "vector",
                 "path": "embedding",
-                "numDimensions": 384,
+                "numDimensions": 1024,
                 "similarity": "cosine"
             },
             {"type": "filter", "path": "metadata.productName"}
@@ -35,7 +35,7 @@ The answers for code blocks in this section are as follows:
 </div>
 </details>
 
-**CODE_BLOCK_11**
+**CODE_BLOCK_12**
 
 <details>
 <summary>Answer</summary>
@@ -56,6 +56,9 @@ The answers for code blocks in this section are as follows:
         "$project": {
             "_id": 0,
             "body": 1,
+            "metadata.productName": 1, 
+            "metadata.contentType": 1,
+            "updated": 1,
             "score": {"$meta": "vectorSearchScore"}
         }
     }
@@ -64,7 +67,7 @@ The answers for code blocks in this section are as follows:
 </div>
 </details>
 
-**CODE_BLOCK_12**
+**CODE_BLOCK_13**
 
 <details>
 <summary>Answer</summary>
@@ -78,7 +81,7 @@ The answers for code blocks in this section are as follows:
             {
                 "type": "vector",
                 "path": "embedding",
-                "numDimensions": 384,
+                "numDimensions": 1024,
                 "similarity": "cosine"
             },
             {"type": "filter", "path": "metadata.contentType"},
@@ -90,7 +93,7 @@ The answers for code blocks in this section are as follows:
 </div>
 </details>
 
-**CODE_BLOCK_13**
+**CODE_BLOCK_14**
 
 <details>
 <summary>Answer</summary>
@@ -116,6 +119,8 @@ The answers for code blocks in this section are as follows:
         "$project": {
             "_id": 0,
             "body": 1,
+            "metadata.productName": 1, 
+            "metadata.contentType": 1,
             "updated": 1,
             "score": {"$meta": "vectorSearchScore"}
         }
