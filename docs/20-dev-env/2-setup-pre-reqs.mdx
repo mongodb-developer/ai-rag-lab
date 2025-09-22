@@ -2,6 +2,7 @@
 
 Set the passkey provided by your workshop instructor, and run the cells under the **Step 1: Setup prerequisites** section in the notebook.
 
+:::caution
 ### Expired passkey OR don't have a passkey
 
 Passkeys are provided to you at MongoDB Developer Days to easily get API keys for LLM and embedding APIs that are used in the workshop. These passkeys are valid for 3 days after the workshop.
@@ -16,7 +17,9 @@ Once the passkey expires, or if you weren't at a MongoDB Developer Day recently,
 ```python
 os.environ["VOYAGE_API_KEY"] = "your-voyageai-api-key"
 ```
+:::
 
+:::caution
 ### If you are running the lab locally
 
 If you aren't using Instruqt or GitHub Codespaces to run the lab and instead running it locally, you will need to do the following additional steps:
@@ -33,8 +36,9 @@ If you aren't using Instruqt or GitHub Codespaces to run the lab and instead run
 MONGODB_URI = "your_connection_string"
 ```
 
-* Manually set the `PROXY_ENDPOINT` variable in the notebook as follows:
+* Set the `PROXY_ENDPOINT` variable in the notebook as follows:
 
 ```python
 PROXY_ENDPOINT = "https://vtqjvgchmwcjwsrela2oyhlegu0hwqnw.lambda-url.us-west-2.on.aws/"
 ```
+:::

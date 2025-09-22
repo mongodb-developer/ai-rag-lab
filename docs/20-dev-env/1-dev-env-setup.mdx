@@ -4,46 +4,6 @@ import Screenshot from "@site/src/components/Screenshot";
 
 # 👐 Setup dev environment
 
-<details>
-  <summary>🦹 If you are doing this lab as part of a MongoDB GenAI Developer Day, you can continue in the environment you previously created.</summary>
-
-  <Tabs groupId="resume lab">
-  <TabItem value="Instruqt" label="Instruqt">
-
-    Navigate to the Instruqt lab using [this](http://mdb.link/instruqt-ai) link. Click **Continue** to continue in the sandbox you created previously.
-
-    <Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/1-resume-sandbox.png" alt="Resume sandbox" />
-
-    In the Explorer menu, navigate to `genai-devday-notebooks` > `labs` > `ai-rag-lab.ipynb` This is the Jupyter Notebook you will be using throughout this lab.
-
-    <Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/2-nav-notebook.png" alt="Navigate to the notebook" />
-
-    :::tip
-    Notice that this documentation website is also linked in the `RAG Lab Instructions` tab of your Instruqt sandbox. Feel free to access the documentation from there instead for the rest of the lab.  
-    :::
-  </TabItem>
-
-  <TabItem value="GitHub Codespaces" label="GitHub Codespaces">
-
-    Navigate to [this](https://github.com/codespaces/new/mongodb-developer/genai-devday-notebooks?quickstart=1) link. Click the **Resume this codespace** button to resume the codespace you created previously.
-
-    <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/codespaces/1-resume-codespace.png" alt="Resume codespace" />
-
-    Give the codespace a few seconds to restart. When files appear in the Explorer tab, click on the file named `ai-rag-lab.ipynb` under `labs`. This is the Jupyter Notebook you will be using throughout this lab.
-
-    <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/codespaces/2-nav-notebook.png" alt="Navigate to the notebook" />
-  </TabItem>
-
-  <TabItem value="Local" label="Local">
-
-    Open the browser tab where your Jupyter Server from before is running and open the file named `ai-rag-lab.ipynb`.
-
-    <Screenshot url="localhost:8888/tree" src="img/screenshots/20-dev-env/1-dev-env-setup/local/1-nav-notebook.png" alt="Jupyter Notebook" />
-
-  </TabItem>
-  </Tabs>
-</details>
-
 :::tip
 In this lab, we will be using Jupyter Notebooks, which is an interactive Python environment. If you are new to Jupyter Notebooks, use [this](https://mongodb-developer.github.io/vector-search-lab/docs/dev-env/jupyter-notebooks) guide to familiarize yourself with the environment.
 :::
@@ -53,19 +13,19 @@ In this lab, we will be using Jupyter Notebooks, which is an interactive Python 
 
 Instruqt is a lab platform that provides cloud-based sandboxes which come pre-configured with all the tools you need to run this lab.
 
-**Navigate to the Instruqt lab using [this](http://mdb.link/instruqt-ai) link.** Fill out the form that appears and click **Submit and access**.
+**Navigate to the Instruqt lab using [this](http://mdb.link/instruqt-rag-lab) link.** Fill out the form that appears and click **Submit and access**.
 
-<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/3-submit-form.png" alt="Submit Instruqt form" />
+<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/1-submit-form.png" alt="Submit Instruqt form" />
 
 Click **Start** to launch the lab environment.
 
-<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/4-start-sandbox-setup.png" alt="Start Instruqt sandbox" />
+<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/2-start-sandbox-setup.png" alt="Start Instruqt sandbox" />
 
 You should see a screen with a purple progress bar indicating that Instruqt is preparing a sandbox with all the required libraries for this lab and a MongoDB cluster.
 
 Once this is done, you should see a Start button at the bottom right of the screen. Click this to enter the lab.
 
-<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/5-start-lab.png" alt="Start Instruqt lab" />
+<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/3-start-lab.png" alt="Start Instruqt lab" />
 
 ### Connect to the MongoDB cluster
 
@@ -73,45 +33,51 @@ Let's first connect to the MongoDB cluster that was created for you. This will a
 
 To do this, click the leaf icon in the left navigation bar of the IDE. This is MongoDB's VSCode extension.
 
-<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/6-click-leaf.png" alt="Click leaf icon" />
+<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/4-click-leaf.png" alt="Click leaf icon" />
 
 Under **Connections**, click the _Local MongoDB Atlas_ connection. This should automatically establish a connection to the local MongoDB cluster running on port 27017.
 
-<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/7-connect-cluster.png" alt="Connect to the cluster" />
+<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/5-connect-cluster.png" alt="Connect to the cluster" />
 
-If the connection was successful, you should see a green leaf and a "connected" message appear around the _Local MongoDB Atlas_ connection.
+If the connection was successful, you should see a green leaf appear next to the _Local MongoDB Atlas_ connection.
 
 You will also see the default databases in the cluster appear under **Connections**. Any additional databases we create during the lab will also appear here.
 
-<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/8-connection-successful.png" alt="Connection successful" />
+<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/6-connection-successful.png" alt="Connection successful" />
 
 ### Jupyter Notebook setup
 
 You will be filling code in a Jupyter Notebook during this lab, so let's get set up with that next!
 
-Within the sandbox, click on the files icon in the left navigation bar of the IDE. In the Explorer menu, navigate to `genai-devday-notebooks` > `labs` > `ai-rag-lab.ipynb` to open the Jupyter Notebook for this lab.
+The notebook for this lab, namely `ai-rag-lab.ipynb`, should have automatically opened up in the Code Editor upon startup.
 
-<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/2-nav-notebook.png" alt="Navigate to the notebook" />
+Select the Python interpreter by clicking **Select Kernel** at the top right of the IDE.
 
-Next, select the Python interpreter by clicking **Select Kernel** at the top right of the IDE.
-
-<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/9-select-kernel.png" alt="Select kernel" />
+<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/7-select-kernel.png" alt="Select kernel" />
 
 In the modal that appears, click **Python environments...** and select the interpreter that is marked as **Recommended** or **Global Env**.
 
-<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/10-python-env-modal.png" alt="Select Python Environments" />
+<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/8-python-env-modal.png" alt="Select Python Environments" />
 
-<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/11-select-recommended.png" alt="Select recommended interpreter" />
+<Screenshot url="https://play.instruqt.com" src="img/screenshots/20-dev-env/1-dev-env-setup/instruqt/9-select-recommended.png" alt="Select recommended interpreter" />
 
 That's it! You're ready for the lab!
-
-:::tip
-Notice that this documentation website is also linked in the `RAG Lab Instructions` tab of your Instruqt sandbox. Feel free to access the documentation from there instead for the rest of the lab.  
-:::
 
 </TabItem>
 
 <TabItem value="GitHub Codespaces" label="GitHub Codespaces">
+
+<details>
+  <summary>🦹 If you are doing this lab as part of a MongoDB GenAI Developer Day, you can continue in the environment you previously created.</summary>
+
+    Navigate to [this](https://github.com/codespaces/new/mongodb-developer/genai-devday-notebooks?quickstart=1) link. Click the **Resume this codespace** button to resume the codespace you created previously.
+
+    <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/codespaces/1-resume-codespace.png" alt="Resume codespace" />
+
+    Give the codespace a few seconds to restart. When files appear in the Explorer tab, click on the file named `ai-rag-lab.ipynb` under `labs`. This is the Jupyter Notebook you will be using throughout this lab.
+
+    <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/codespaces/2-nav-notebook.png" alt="Navigate to the notebook" />
+</details>
 
 A codespace is a cloud-hosted development environment from GitHub, that comes pre-configured with all the tools you need to run this lab.
 
@@ -133,7 +99,7 @@ Under **Connections**, click the _Local MongoDB Atlas_ connection. This should a
 
 <Screenshot url="https://github.com/codespaces" src="img/screenshots/20-dev-env/1-dev-env-setup/codespaces/5-connect-cluster.png" alt="Connect to the cluster" />
 
-If the connection was successful, you should see a green leaf and a "connected" message appear around the _Local MongoDB Atlas_ connection.
+If the connection was successful, you should see a green leaf appear next to the _Local MongoDB Atlas_ connection.
 
 You will also see the default databases in the cluster appear under **Connections**. Any additional databases we create during the lab will also appear here.
 
@@ -152,6 +118,14 @@ That's it! You're ready for the lab!
 </TabItem>
 
 <TabItem value="Local" label="Local">
+
+<details>
+  <summary>🦹 If you are doing this lab as part of a MongoDB GenAI Developer Day, you can continue in the environment you previously created.</summary>
+
+    Open the browser tab where your Jupyter Server from before is running and open the file named `ai-rag-lab.ipynb`.
+
+    <Screenshot url="localhost:8888/tree" src="img/screenshots/20-dev-env/1-dev-env-setup/local/1-nav-notebook.png" alt="Jupyter Notebook" />
+</details>
 
 To run the lab locally, follow the steps below: 
 
