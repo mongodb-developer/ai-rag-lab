@@ -1,0 +1,8 @@
+{
+  "label": "Realizar Busca Vetorial nos Seus Dados",
+  "position": 40,
+  "link": {
+    "type": "generated-index",
+    "description": "Execute consultas de busca vetorial usando MongoDB Atlas Vector Search"
+  }
+}

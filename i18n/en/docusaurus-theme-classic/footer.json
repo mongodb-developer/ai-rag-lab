@@ -1,0 +1,26 @@
+{
+  "link.item.label.Try MongoDB Atlas": {
+    "message": "Try MongoDB Atlas",
+    "description": "The label of footer link with label=Try MongoDB Atlas linking to https://www.mongodb.com/try?utm_campaign=devrel&utm_source=workshop&utm_medium=cta&utm_content=ai_rag_lab&utm_term=apoorva.joshi"
+  },
+  "link.item.label.Developer Center": {
+    "message": "Developer Center",
+    "description": "The label of footer link with label=Developer Center linking to https://www.mongodb.com/developer?utm_campaign=devrel&utm_source=workshop&utm_medium=cta&utm_content=ai_rag_lab&utm_term=apoorva.joshi"
+  },
+  "link.item.label.GenAI Code Examples": {
+    "message": "GenAI Code Examples",
+    "description": "The label of footer link with label=GenAI Code Examples linking to https://github.com/mongodb-developer/GenAI-Showcase"
+  },
+  "link.item.label.GenAI Forums": {
+    "message": "GenAI Forums",
+    "description": "The label of footer link with label=GenAI Forums linking to https://www.mongodb.com/community/forums/c/generative-ai/162?utm_campaign=devrel&utm_source=workshop&utm_medium=cta&utm_content=ai_rag_lab&utm_term=apoorva.joshi"
+  },
+  "link.item.label.This lab in GitHub": {
+    "message": "This lab in GitHub",
+    "description": "The label of footer link with label=This lab in GitHub linking to https://github.com/mongodb-developer/ai-rag-lab"
+  },
+  "copyright": {
+    "message": "© 2025 MongoDB, Inc.",
+    "description": "The footer copyright"
+  }
+}

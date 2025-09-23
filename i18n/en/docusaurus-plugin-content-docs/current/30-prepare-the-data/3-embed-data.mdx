@@ -1,0 +1,33 @@
+# 👐 Generate embeddings
+
+To perform vector search on the data, we need to embed it (i.e. generate embedding vectors) before ingesting it into MongoDB.
+
+Fill in any `<CODE_BLOCK_N>` placeholders and run the cells under the **Step 4: Generate embeddings** section in the notebook to embed the chunked articles.
+
+The answers for code blocks in this section are as follows:
+
+**CODE_BLOCK_3**
+
+<details>
+<summary>Answer</summary>
+<div>
+```python
+embedding_model.encode(text)
+```
+</div>
+</details>
+
+**CODE_BLOCK_4**
+
+<details>
+<summary>Answer</summary>
+<div>
+```python
+doc["embedding"] = get_embedding(doc["body"])
+```
+</div>
+</details>
+
+:::caution
+If the embedding generation is taking too long (> 5 min), kill/interrupt the cell and move on to the next step with the documents that have been embedded up until that point.
+:::
