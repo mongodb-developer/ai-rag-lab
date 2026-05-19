@@ -3,6 +3,6 @@
   "position": 40,
   "link": {
     "type": "generated-index",
-    "description": "Perform vector search queries using MongoDB Atlas Vector Search"
+    "description": "Perform vector search queries using MongoDB Vector Search"
   }
 }
