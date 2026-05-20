@@ -1,0 +1,17 @@
+# 📘 Componentes de um sistema RAG
+
+Sistemas RAG têm dois componentes principais: **Recuperação** e **Geração**.
+
+## Recuperação
+
+A recuperação envolve principalmente processar seus dados e construir uma base de conhecimento de forma que você seja capaz de recuperar eficientemente informações relevantes dela. Tipicamente envolve três passos principais:
+
+* **Chunking**: Dividir grandes pedaços de informação em segmentos ou chunks menores.
+
+* **Embedding**: Converter uma informação como texto, imagens, áudio, vídeo, etc. em um array de números, também conhecido como vetores.
+
+* **Busca Vetorial**: Recuperar os documentos mais relevantes da base de conhecimento baseado na similaridade de embeddings com o vetor da consulta.
+
+## Geração
+
+A geração envolve criar um prompt que contém todas as instruções e informações necessárias pelo LLM para gerar respostas precisas às consultas do usuário.

@@ -1,0 +1,17 @@
+# 📘 Components of a RAG system
+
+RAG systems have two main components: **Retrieval** and **Generation**.
+
+## Retrieval
+
+Retrieval mainly involves processing your data and constructing a knowledge base in a way that you are able to efficiently retrieve relevant information from it. It typically involves three main steps:
+
+* **Chunking**: Break down large pieces of information into smaller segments or chunks.
+
+* **Embedding**: Convert a piece of information such as text, images, audio, video, etc. into an array of numbers a.k.a. vectors.
+
+* **Vector Search**: Retrieve the most relevant documents from the knowledge base based on embedding similarity with the query vector.
+
+## Generation
+
+Generation involves crafting a prompt that contains all the instructions and information required by the LLM to generate accurate answers to user queries.

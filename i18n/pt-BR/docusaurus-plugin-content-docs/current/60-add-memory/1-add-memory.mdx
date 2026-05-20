@@ -1,0 +1,74 @@
+# 👐 Adicionar memória à aplicação RAG
+
+Em muitas aplicações de perguntas e respostas, queremos permitir que o usuário tenha uma conversa de ida e volta com o LLM, significando que a aplicação precisa de algum tipo de "memória" de perguntas e respostas passadas, e alguma lógica para incorporar essas em seu pensamento atual. Nesta seção, você recuperará o histórico de mensagens de chat do MongoDB e o incorporará em sua aplicação RAG.
+
+Preencha quaisquer espaços reservados `<CODE_BLOCK_N>` e execute as células sob a seção **Step 9: Add memory to the RAG application** no notebook para adicionar memória ao chatbot.
+
+As respostas para os blocos de código nesta seção são as seguintes:
+
+**CODE_BLOCK_18**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+history_collection.create_index("session_id")
+```
+</div>
+</details>
+
+**CODE_BLOCK_19**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+history_collection.insert_one(message)
+```
+</div>
+</details>
+
+**CODE_BLOCK_20**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+history_collection.find({"session_id": session_id}).sort("timestamp", 1)
+```
+</div>
+</details>
+
+**CODE_BLOCK_21**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+retrieve_session_history(session_id)
+```
+</div>
+</details>
+
+**CODE_BLOCK_22**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+{"role": "user", "content": user_query}
+```
+</div>
+</details>
+
+**CODE_BLOCK_23**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+store_chat_message(session_id, "user", user_query)
+store_chat_message(session_id, "assistant", answer)
+```
+</div>
+</details>

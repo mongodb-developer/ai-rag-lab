@@ -1,0 +1,26 @@
+# 👐 Configurar pré-requisitos
+
+Execute as células sob a seção **Step 1: Setup prerequisites** no notebook.
+
+:::info
+
+Passos adicionais **se você está executando o laboratório localmente**:
+
+* Inicie um cluster MongoDB Atlas e obtenha sua string de conexão:
+
+    * Registre-se para uma [conta gratuita MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register) se você ainda não tiver uma
+    * [Crie um novo cluster de banco de dados](https://www.mongodb.com/docs/guides/atlas/cluster)
+    * [Obtenha a string de conexão](https://www.mongodb.com/docs/guides/atlas/connection-string) para seu cluster de banco de dados
+
+* Defina a variável `MONGODB_URI` para a string de conexão do seu cluster da seguinte forma:
+
+```python
+MONGODB_URI = "<your_connection_string>"
+```
+
+* Defina manualmente o valor da variável `SERVERLESS_URL` da seguinte forma:
+
+```python
+SERVERLESS_URL = "https://vtqjvgchmwcjwsrela2oyhlegu0hwqnw.lambda-url.us-west-2.on.aws/"
+```
+:::

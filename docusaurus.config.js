@@ -118,6 +118,18 @@ const config = {
     ],
   ],
   plugins: [require.resolve("docusaurus-lunr-search")],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'pt-BR'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      'pt-BR': {
+        label: 'Português (Brasil)',
+      },
+    },
+  },
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -138,7 +150,10 @@ const config = {
           height: "100%",
         },
         items: [
-         
+         {
+          "type": "localeDropdown",
+          "position": "right", 
+         }
         ],
       },
       footer: {

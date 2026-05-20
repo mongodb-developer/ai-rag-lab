@@ -1,0 +1,20 @@
+# 🦹 Reordenar resultados recuperados
+
+Reordenadores são modelos especializados que são treinados para calcular a relevância entre pares de consulta-documento. Sem reordenação, a ordem dos resultados recuperados é governada pelo modelo de embeddings, que não é otimizado para relevância e pode levar a baixa recuperação do LLM em aplicações RAG.
+
+Preencha quaisquer espaços reservados `<CODE_BLOCK_N>` e execute as células sob a seção **🦹‍♀️ Re-rank retrieved results** no notebook para adicionar um estágio de reordenação ao chatbot.
+
+As respostas para os blocos de código nesta seção são as seguintes:
+
+**CODE_BLOCK_17**
+
+<details>
+<summary>Resposta</summary>
+<div>
+```python
+rerank_model.rank(
+    user_query, documents, return_documents=True, top_k=5
+)
+```
+</div>
+</details>

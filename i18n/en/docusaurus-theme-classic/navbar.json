@@ -1,0 +1,10 @@
+{
+  "title": {
+    "message": "Build RAG Applications using MongoDB",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "MongoDB Logo",
+    "description": "The alt text of navbar logo"
+  }
+}
